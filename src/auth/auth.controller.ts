@@ -11,14 +11,16 @@ export class AuthController{
     //  POST method call --> auth/signup
         @Post('signup')
         signup() {
-            return "I'm signup"
+            return this.authservice.signup()
         }
         
         @Post('signin')
         signin(){
-            return "I'm signIn"
+            return this.authservice.signin()
         }
 }
 
 
-
+// In controller, We might check body request request if needed.
+// Or If might to check any header or any other business login, you can utlize this controller page.
+ 
